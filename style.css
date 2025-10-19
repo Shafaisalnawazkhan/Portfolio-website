@@ -1,45 +1,78 @@
+/* ---------------------------
+   Full CSS (replace file)
+   --------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: #080808;
     color: #fff;
 }
+
+/* ===== HEADER ===== */
 #header {
     width: 100%;
     height: 100vh;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
 }
+
 .container {
     padding: 10px 10%;
+    width: 100%;
 }
+
+/* NAV */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
+
+/* logo */
 .logo {
     width: 140px;
+    height: auto;
+    display: inline-block;
 }
+
+/* nav list default (desktop) */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav links */
 nav ul li {
     display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    padding: 6px 4px;
+    display: inline-block;
 }
+
 nav ul li a::after {
     content: '';
     width: 0%;
@@ -48,54 +81,81 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.35s;
 }
+
 nav ul li a:hover::after {
     width: 100%;
 }
+
+/* ===== MENU ICONS (desktop hidden) ===== */
+/* Important: hide icons by default (desktop) */
 nav .fa-bars,
-nav .fa-square-xmark {
-    display: none;
+nav ul .fa-square-xmark {
+    display: none !important;
 }
+
+/* ===== HERO / HEADER TEXT ===== */
 .header-text {
-    margin-top: 20%;
-    font-size: 30px;
+    margin-top: 5%;
+    text-align: left;
+    max-width: 900px;
 }
+
+.header-text p {
+    font-size: 20px;
+    color: #e6e6e6;
+}
+
 .header-text h1 {
     font-size: 60px;
-    margin-top: 20px;
+    margin-top: 10px;
+    line-height: 1.05;
 }
+
 .header-text h1 span {
     color: #ff004f;
 }
+
+/* ===== ABOUT ===== */
 #about {
     padding: 80px 0;
     color: #ababab;
 }
+
 .row {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     flex-wrap: wrap;
 }
+
 .about-col-1 {
     flex-basis: 35%;
 }
+
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    display: block;
 }
+
 .about-col-2 {
     flex-basis: 60%;
 }
+
 .sub-title {
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
+
+/* tabs */
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
+
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
@@ -103,6 +163,7 @@ nav .fa-square-xmark {
     cursor: pointer;
     position: relative;
 }
+
 .tab-links::after {
     content: '';
     width: 0;
@@ -111,82 +172,106 @@ nav .fa-square-xmark {
     position: absolute;
     left: 0;
     bottom: -8px;
-    transition: 0.5s;
+    transition: 0.35s;
 }
+
 .tab-links.active-link::after {
     width: 50%;
 }
+
 .tab-contents {
     display: none;
 }
+
 .tab-contents.active-tab {
     display: block;
 }
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
+
 .tab-contents ul li span {
     color: #b54769;
     font-size: 14px;
 }
+
+/* ===== SKILLS ===== */
 #skill {
     padding: 30px 0;
 }
+
 .skill-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
+
 .skill-list div {
     background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.35s;
+    text-align: center;
 }
+
 .skill-list div i {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
 .skill-list div h2 {
     font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
+
+/* "Learn more" link (button-like) - will use .btn */
 .skill-list div a {
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 20px;
     display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 1px solid #ff004f;
+    background: transparent;
 }
+
+/* hover effect */
 .skill-list div:hover {
     background: #ff004f;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
+
+/* ===== PROJECTS ===== */
 #project {
     padding: 50px 0;
 }
+
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
+
 .project {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
+
 .project img {
     width: 100%;
-    border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
+    transition: transform 0.45s;
 }
+
 .layer {
     width: 100%;
     height: 0%;
@@ -200,87 +285,136 @@ nav .fa-square-xmark {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 30px;
     text-align: center;
     font-size: 16px;
-    transition: height 0.5s;
+    transition: height 0.45s;
 }
+
 .layer h3 {
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
+
+.layer p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
 .layer a {
-    margin-top: 20px;
+    margin-top: 18px;
     color: #ff004f;
     text-decoration: none;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 56px;
     background: #fff;
-    width: 60px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .project:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
+
 .project:hover .layer {
     height: 100%;
 }
+
+/* "See More" button under projects uses .btn (keeps same style) */
+
+/* ===== BUTTON STYLES (GLOBAL) ===== */
+/* These cover Learn More, See More, Download CV, Submit, etc. */
+
+/* Primary outline button (original boxed look) */
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 35px;
-    border: 1px solid #ff004f;
+    padding: 12px 40px;
     border-radius: 6px;
+    border: 1px solid #ff004f;
     background: transparent;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.4s, transform 0.3s;
+    font-weight: 600;
+    transition: background 0.25s, transform 0.18s;
+    cursor: pointer;
+    box-sizing: border-box;
 }
+
+/* Filled primary button variant (Download CV, Submit when .btn2 used) */
+.btn.btn2,
+button.btn.btn2 {
+    background: #ff004f;
+    color: #fff;
+    border: 1px solid #ff004f;
+}
+
+/* hover states */
 .btn:hover {
     background: #ff004f;
     transform: translateY(-3px);
 }
-.btn.btn2 {
+
+.btn.btn2:hover,
+button.btn.btn2:hover {
+    background: #e60047;
+    transform: translateY(-3px);
+}
+
+/* Make sure form submit button looks like .btn2 if it's a <button> */
+form button[type="submit"] {
+    border: 1px solid #ff004f;
     background: #ff004f;
     color: #fff;
+    padding: 12px 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
-.btn.btn2:hover {
-    background: #e60047;
-}
+
+/* ===== CONTACT ===== */
 .contact-left {
     flex-basis: 35%;
 }
+
 .contact-right {
     flex-basis: 60%;
 }
+
 .contact-left p {
     margin-top: 20px;
 }
+
 .contact-left p i {
     color: #ff004f;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 22px;
 }
+
 .social-icons {
     margin-top: 30px;
 }
+
 .social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
     color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
+    transition: transform 0.25s;
 }
+
 .social-icons a:hover {
     color: #ff004f;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
+
 .contact-right form {
     width: 100%;
 }
+
 form input,
 form textarea {
     width: 100%;
@@ -290,16 +424,13 @@ form textarea {
     padding: 15px;
     margin: 15px 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 6px;
+    box-sizing: border-box;
 }
-form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright {
+
+/* ===== FOOTER ===== */
+copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -307,152 +438,141 @@ form .btn2 {
     font-weight: 300;
     margin-top: 20px;
 }
-.copyright i {
-    color: #b54769;
-}
+
+/* ===== RESPONSIVE: MOBILE / TABLET ===== */
+
+/* Show menu icons and mobile nav only on small screens.
+   Important: icons are hidden above (desktop) and forced visible here. */
 @media only screen and (max-width: 768px) {
-    #header {
-        background-image: url("Nawaz bag1.png");
+
+    /* Show mobile menu icons (bars outside ul and close X inside ul) */
+    nav .fa-bars,
+    nav ul .fa-square-xmark {
+        display: block !important;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 9999;
     }
+
+    /* Make nav ul become off-canvas mobile menu */
+    nav ul {
+        display: block !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: -280px !important; /* hidden by default */
+        width: 280px !important;
+        height: 100vh !important;
+        padding-top: 70px !important;
+        background: #111 !important;
+        transition: right 0.33s ease !important;
+        box-shadow: -8px 0 30px rgba(0,0,0,0.6) !important;
+        text-align: center !important;
+        z-index: 9998 !important;
+    }
+
+    /* When JS toggles .show-menu on the UL, it will slide in */
+    nav ul.show-menu {
+        right: 0 !important;
+    }
+
+    nav ul li {
+        display: block !important;
+        margin: 20px 0 !important;
+    }
+
+    /* close icon inside menu top-right */
+    nav ul .fa-square-xmark {
+        position: absolute !important;
+        top: 18px !important;
+        right: 18px !important;
+        font-size: 22px !important;
+    }
+
+    /* Make header text centered and scaled for mobile */
     .header-text {
-        margin-top: 60%;
-        font-size: 16px;
+        margin-top: 28%;
         text-align: center;
+        padding: 0 10px;
     }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
     .header-text h1 {
         font-size: 30px;
     }
-    nav .fa-bars,
-    nav .fa-square-xmark {
-        display: block;
-        font-size: 25px;
-        color: #fff;
-        cursor: pointer;
-    }
-    nav ul {
-        background: #111;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 60px;
-        z-index: 100;
+
+    /* About section stacks */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100% !important;
         text-align: center;
-        transition: right 0.5s ease;
     }
-    nav ul li {
+
+    .about-col-1 img {
+        width: 80%;
+        margin: 0 auto;
         display: block;
-        margin: 25px;
     }
-    nav ul i.fa-square-xmark {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-    }
+
     .sub-title {
         font-size: 40px;
     }
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
+
+    /* skill/project lists become single column */
+    .skill-list,
+    .project-list {
+        grid-template-columns: 1fr !important;
+        grid-gap: 20px;
     }
-    .about-col-1 {
-        margin-bottom: 30px;
+
+    /* Contact columns stack */
+    .contact-left,
+    .contact-right {
+        flex-basis: 100% !important;
+        text-align: center;
     }
-    .about-col-2 {
-        font-size: 14px;
+
+    .contact-right form {
+        width: 92%;
+        margin: 0 auto;
     }
-    .tab-links {
-        font-size: 14px;
-        margin-right: 20px;
-    }
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-    }
-    .copyright {
-        font-size: 14px;
-    }
-    .btn {
-        width: 100%;
+
+    /* Buttons become full-width with the same boxed red look */
+    .btn,
+    .btn.btn2,
+    button.btn.btn2,
+    form button[type="submit"] {
+        width: calc(100% - 40px);
+        display: block;
+        margin: 14px auto;
         text-align: center;
         padding: 12px 0;
     }
-}
-nav .fa-bars,
-nav .fa-square-xmark {
-  display: none !important;      
-  pointer-events: none;          
-}
-nav ul {
-  position: static !important;
-  right: auto !important;
-  top: auto !important;
-  height: auto !important;
-  background: transparent !important;
-  width: auto !important;
-  padding-top: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-}
-nav ul li {
-  display: inline-block !important;
-}
-@media only screen and (max-width: 768px) {
-  nav .fa-bars,
-  nav .fa-square-xmark {
-    display: block !important;
-    pointer-events: auto !important;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  nav ul {
-    display: block !important;
-    background: #111 !important;
-    position: fixed !important;
-    top: 0 !important;
-    right: -260px !important; /* off-screen by default */
-    width: 260px !important;
-    height: 100vh !important;
-    padding-top: 70px !important;
-    transition: right 0.35s ease !important;
-    text-align: center !important;
-    box-shadow: -6px 0 30px rgba(0,0,0,0.6) !important;
-  }
 
-  nav ul.show-menu {
-    right: 0 !important; /* add this class with JS to open the menu */
-  }
+    /* adjust icon sizes */
+    .social-icons a {
+        font-size: 26px;
+        margin: 8px;
+    }
+}
 
-  nav ul li {
-    display: block !important;
-    margin: 28px 0 !important;
-  }
-  nav ul i.fa-square-xmark {
-    position: absolute !important;
-    top: 18px !important;
-    right: 18px !important;
-    font-size: 22px !important;
-    color: #fff !important;
-  }
+/* Extra small phones */
+@media only screen and (max-width: 420px) {
+    .header-text {
+        margin-top: 22%;
+    }
+    .header-text h1 {
+        font-size: 26px;
+    }
+    .sub-title {
+        font-size: 34px;
+    }
+    .logo {
+        width: 120px;
+    }
 }
-.btn {
-  display: inline-block !important;
-  padding: 12px 32px !important;
-  border-radius: 8px !important;
-  text-decoration: none !important;
-  font-weight: 600 !important;
-  transition: transform 0.18s ease, background 0.18s ease !important;
-}
-.btn:hover { transform: translateY(-3px) !important; }
-@media (max-width: 600px) {
-  .btn, .btn.btn2 {
-    width: calc(100% - 40px) !important;
-    display: block !important;
-    margin: 12px auto !important;
-    padding: 12px 0 !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-  }
-}
+
+/* End of CSS file */
