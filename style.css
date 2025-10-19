@@ -53,14 +53,10 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
-
-/* --- Hide menu icons by default (desktop) --- */
 nav .fa-bars,
 nav .fa-square-xmark {
     display: none;
 }
-
-/* --- Header Text --- */
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -72,8 +68,6 @@ nav .fa-square-xmark {
 .header-text h1 span {
     color: #ff004f;
 }
-
-/* --- About Section --- */
 #about {
     padding: 80px 0;
     color: #ababab;
@@ -136,8 +130,6 @@ nav .fa-square-xmark {
     color: #b54769;
     font-size: 14px;
 }
-
-/* --- Skills Section --- */
 #skill {
     padding: 30px 0;
 }
@@ -175,8 +167,6 @@ nav .fa-square-xmark {
     background: #ff004f;
     transform: translateY(-10px);
 }
-
-/* --- Projects --- */
 #project {
     padding: 50px 0;
 }
@@ -236,8 +226,6 @@ nav .fa-square-xmark {
 .project:hover .layer {
     height: 100%;
 }
-
-/* --- Buttons (Learn More / See More / Submit etc.) --- */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -261,8 +249,6 @@ nav .fa-square-xmark {
 .btn.btn2:hover {
     background: #e60047;
 }
-
-/* --- Contact --- */
 .contact-left {
     flex-basis: 35%;
 }
@@ -324,8 +310,6 @@ form .btn2 {
 .copyright i {
     color: #b54769;
 }
-
-/* --- Responsive (Mobile) --- */
 @media only screen and (max-width: 768px) {
     #header {
         background-image: url("Nawaz bag1.png");
@@ -340,8 +324,6 @@ form .btn2 {
     .header-text h1 {
         font-size: 30px;
     }
-
-    /* Show menu icons on mobile only */
     nav .fa-bars,
     nav .fa-square-xmark {
         display: block;
