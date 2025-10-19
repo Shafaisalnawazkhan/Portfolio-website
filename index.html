@@ -130,10 +130,10 @@
         }
         var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
-            sidemenu.style.right = "0";
+            sidemenu.classList.add('show-menu');
         }
         function closemenu() {
-            sidemenu.style.right = "-200px";
+            sidemenu.classList.remove('show-menu');
         }
     </script>
 </body>
