@@ -10,19 +10,19 @@ html {
 }
 
 body {
-    background: #080808;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
 }
 
-/* HEADER SECTION */
+/* HEADER */
 #header {
     width: 100%;
     height: 100vh;
-    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 .container {
@@ -41,10 +41,15 @@ nav {
     width: 140px;
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    transition: right 0.5s;
+}
+
 nav ul li {
-    display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -58,7 +63,7 @@ nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
-    background: #ff004f;
+    background: #ff4b5c;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -69,7 +74,14 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* HERO SECTION */
+.open-btn, .close-btn {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* HERO */
 .header-text {
     text-align: center;
     margin-top: 5%;
@@ -77,7 +89,7 @@ nav ul li a:hover::after {
 
 .header-text p {
     font-size: 20px;
-    color: #eee;
+    color: #ddd;
 }
 
 .header-text h1 {
@@ -86,7 +98,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #ff004f;
+    color: #ff4b5c;
 }
 
 .hero-image {
@@ -95,7 +107,7 @@ nav ul li a:hover::after {
     height: 250px;
     overflow: hidden;
     border-radius: 50%;
-    border: 4px solid #ff004f;
+    border: 4px solid #ff4b5c;
 }
 
 .hero-image img {
@@ -104,10 +116,10 @@ nav ul li a:hover::after {
     object-fit: cover;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 #about {
     padding: 80px 0;
-    color: #ababab;
+    color: #ddd;
 }
 
 .row {
@@ -152,7 +164,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #ff4b5c;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -177,7 +189,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #b54769;
+    color: #ff4b5c;
     font-size: 14px;
 }
 
@@ -194,7 +206,7 @@ nav ul li a:hover::after {
 }
 
 .skill-list div {
-    background: #262626;
+    background: rgba(0,0,0,0.6);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -209,8 +221,23 @@ nav ul li a:hover::after {
 }
 
 .skill-list div:hover {
-    background: #ff004f;
+    background: #ff4b5c;
     transform: translateY(-10px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: #ff4b5c;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #ff1f3f;
 }
 
 /* PROJECTS */
@@ -240,7 +267,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #ff4b5c);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -250,7 +277,7 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 16px;
     transition: height 0.5s;
@@ -267,6 +294,7 @@ nav ul li a:hover::after {
 /* CONTACT */
 .contact-left {
     flex-basis: 35%;
+    margin-bottom: 40px;
 }
 
 .contact-right {
@@ -274,7 +302,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p i {
-    color: #ff004f;
+    color: #ff4b5c;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -283,19 +311,19 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
-    transition: transform 0.5s;
+    color: #ddd;
+    transition: transform 0.5s, color 0.5s;
 }
 
 .social-icons a:hover {
-    color: #ff004f;
+    color: #ff4b5c;
     transform: translateY(-5px);
 }
 
 form input,
 form textarea {
     width: 100%;
-    background: #262626;
+    background: rgba(0,0,0,0.6);
     border: none;
     outline: none;
     padding: 15px;
@@ -309,44 +337,29 @@ form textarea {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: rgba(0,0,0,0.6);
     font-weight: 300;
     margin-top: 20px;
 }
 
-/* RESPONSIVE DESIGN */
-@media only screen and (max-width: 600px) {
-    nav .fa-bars, nav .fa-square-xmark {
-        display: block;
-        font-size: 25px;
-        color: #fff;
-    }
-
-    nav ul {
-        background: #111;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        transition: right 0.5s;
-        z-index: 100;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
         text-align: center;
     }
 
-    .header-text {
-        margin-top: 20%;
+    .about-col-1, .about-col-2, .contact-left, .contact-right {
+        flex-basis: 100%;
     }
 
-    .hero-image {
-        width: 180px;
-        height: 180px;
+    .about-col-1 img {
+        width: 70%;
+        margin: 0 auto 20px;
+    }
+
+    .skill-list, .project-list {
+        grid-template-columns: 1fr;
     }
 
     .header-text h1 {
@@ -361,21 +374,29 @@ form textarea {
         font-size: 40px;
     }
 
-    .about-col-1,
-    .about-col-2,
-    .contact-left,
-    .contact-right {
-        flex-basis: 100%;
-        text-align: center;
+    .hero-image {
+        width: 180px;
+        height: 180px;
     }
 
-    .about-col-1 img {
-        width: 80%;
-        margin: 0 auto;
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #111;
+        flex-direction: column;
+        padding-top: 50px;
+        transition: 0.5s;
+        z-index: 999;
     }
 
-    .skill-list,
-    .project-list {
-        grid-template-columns: 1fr;
+    nav ul li {
+        margin: 25px 0;
+    }
+
+    .open-btn, .close-btn {
+        display: block;
     }
 }
