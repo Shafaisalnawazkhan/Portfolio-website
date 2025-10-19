@@ -11,6 +11,8 @@ body {
     background: #080808;
     color: #fff;
 }
+
+
 #header {
     width: 100%;
     height: 100vh;
@@ -53,6 +55,8 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+
+
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -65,6 +69,8 @@ nav ul li a:hover::after {
 .header-text h1 span {
     color: #ff004f;
 }
+
+
 #about {
     padding: 80px 0;
     color: #ababab;
@@ -127,6 +133,8 @@ nav ul li a:hover::after {
     color: #b54769;
     font-size: 14px;
 }
+
+
 #skill {
     padding: 30px 0;
 }
@@ -165,6 +173,8 @@ nav ul li a:hover::after {
     background: #ff004f;
     transform: translateY(-10px);
 }
+
+
 #project {
     padding: 50px 0;
 }
@@ -224,6 +234,8 @@ nav ul li a:hover::after {
 .project:hover .layer {
     height: 100%;
 }
+
+
 .btn {
     display: block;
     margin: 50px auto;
@@ -242,6 +254,8 @@ nav ul li a:hover::after {
     display: inline-block;
     background: #ff004f;
 }
+
+
 .contact-left {
     flex-basis: 35%;
 }
@@ -292,6 +306,7 @@ form .btn2 {
     margin-top: 20px;
     cursor: pointer;
 }
+
 .copyright {
     width: 100%;
     text-align: center;
@@ -303,18 +318,22 @@ form .btn2 {
 .copyright i {
     color: #b54769;
 }
+
 @media only screen and (max-width: 600px) {
+
     #header {
         background-image: url("Nawaz bag1.png");
         background-size: cover;
         background-position: center;
     }
+
     nav .fa-bars, nav .fa-square-xmark {
         display: block;
         font-size: 25px;
         cursor: pointer;
         color: #fff;
     }
+
     nav ul {
         background: #111;
         position: fixed;
@@ -326,82 +345,101 @@ form .btn2 {
         z-index: 100;
         transition: right 0.5s ease;
     }
+
     nav ul li {
         display: block;
         margin: 25px;
         text-align: center;
     }
+
     nav ul .fa-square-xmark {
         position: absolute;
         top: 25px;
         left: 25px;
     }
+
     .header-text {
         margin-top: 55%;
         text-align: center;
         font-size: 16px;
     }
+
     .header-text h1 {
         font-size: 30px;
     }
+
     .sub-title {
         font-size: 40px;
         text-align: center;
     }
+
     .about-col-1,
     .about-col-2 {
         flex-basis: 100%;
         text-align: center;
     }
+
     .about-col-1 {
         margin-bottom: 30px;
     }
+
     .about-col-1 img {
         width: 80%;
         margin: 0 auto;
         display: block;
     }
+
     .about-col-2 {
         font-size: 14px;
     }
+
     .tab-titles {
         justify-content: center;
     }
+
     .tab-links {
         font-size: 14px;
         margin-right: 20px;
     }
+
     .skill-list {
         grid-template-columns: 1fr;
         grid-gap: 20px;
         text-align: center;
     }
+
     .project-list {
         grid-template-columns: 1fr;
         grid-gap: 25px;
         text-align: center;
     }
+
     .project img {
         width: 100%;
     }
+
     .contact-left,
     .contact-right {
         flex-basis: 100%;
         text-align: center;
     }
+
     .contact-right form {
         width: 90%;
         margin: 0 auto;
     }
+
     .social-icons a {
         font-size: 25px;
         margin: 10px;
     }
+
     .btn,
     .btn2 {
         font-size: 14px;
         padding: 10px 20px;
     }
+
     .copyright {
         font-size: 14px;
     }
