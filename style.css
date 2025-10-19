@@ -309,6 +309,33 @@ form .btn2 {
         background-size: cover;
         background-position: center;
     }
+    nav .fa-bars, nav .fa-square-xmark {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: #fff;
+    }
+    nav ul {
+        background: #111;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 100;
+        transition: right 0.5s ease;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+        text-align: center;
+    }
+    nav ul .fa-square-xmark {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
     .header-text {
         margin-top: 55%;
         text-align: center;
@@ -317,45 +344,19 @@ form .btn2 {
     .header-text h1 {
         font-size: 30px;
     }
-    nav .fa-bars, nav .fa-square-xmark {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        color: #fff;
-    }
-    nav ul {
-        background: #b54769;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fa-square-xmark {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
     .sub-title {
         font-size: 40px;
         text-align: center;
     }
-    .about-col-1, .about-col-2 {
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
         text-align: center;
     }
     .about-col-1 {
         margin-bottom: 30px;
     }
-    .about-col-1 img{
+    .about-col-1 img {
         width: 80%;
         margin: 0 auto;
         display: block;
@@ -363,20 +364,43 @@ form .btn2 {
     .about-col-2 {
         font-size: 14px;
     }
-    .tab-totles{
+    .tab-titles {
         justify-content: center;
     }
     .tab-links {
         font-size: 14px;
         margin-right: 20px;
     }
-    .skill-list{
-        grid-tamplate-columns: 1fr;
+    .skill-list {
+        grid-template-columns: 1fr;
         grid-gap: 20px;
         text-align: center;
     }
-    .contact-left, .contact-right {
+    .project-list {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        text-align: center;
+    }
+    .project img {
+        width: 100%;
+    }
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
+        text-align: center;
+    }
+    .contact-right form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .social-icons a {
+        font-size: 25px;
+        margin: 10px;
+    }
+    .btn,
+    .btn2 {
+        font-size: 14px;
+        padding: 10px 20px;
     }
     .copyright {
         font-size: 14px;
