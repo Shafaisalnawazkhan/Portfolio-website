@@ -8,7 +8,8 @@
     <script src="https://kit.fontawesome.com/a38b2fbb2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
+    <!-- HEADER SECTION -->
+    <header id="header">
         <div class="container">
             <nav>
                 <img src="Nawazlogo.png" class="logo" alt="Logo">
@@ -18,9 +19,9 @@
                     <li><a href="#skill">Skills</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                    <i class="fa-solid fa-square-xmark close-btn" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fa-solid fa-bars open-btn" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -31,9 +32,10 @@
                 <h1>Hi, I'm <span>M Mohammed Nawaz</span></h1>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div id="about">
+    <!-- ABOUT SECTION -->
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -41,8 +43,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am a passionate web developer with experience in building responsive websites.</p>
-
+                    <p>I am a passionate web developer with experience in building responsive and attractive websites and apps.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('education')">Education</p>
                     </div>
@@ -54,9 +55,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="skill">
+    <!-- SKILLS SECTION -->
+    <section id="skill">
         <div class="container">
             <h1 class="sub-title">My Skills</h1>
             <div class="skill-list">
@@ -64,19 +66,20 @@
                     <i class="fa-solid fa-laptop-code"></i>
                     <h2>Web Development</h2>
                     <p>I build attractive and user-friendly <span>websites</span> using HTML, CSS, and JavaScript.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-android"></i>
                     <h2>App Development</h2>
                     <p>I create intuitive <span>apps</span> to bring ideas to life using Kotlin and Android Studio.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="project">
+    <!-- PROJECTS SECTION -->
+    <section id="project">
         <div class="container">
             <h1 class="sub-title">My Projects</h1>
             <div class="project-list">
@@ -84,16 +87,17 @@
                     <img src="blockchain.png" alt="Blockchain Project">
                     <div class="layer">
                         <h3>Blockchain-based Organ Donation System</h3>
-                        <p>A blockchain-based organ donation system ensures transparent and tamper-proof records of donors and recipients.<br>It securely stores medical and consent data, reducing fraud and illegal organ trading.</p>
+                        <p>A blockchain-based organ donation system ensures transparent and tamper-proof records of donors and recipients. It securely stores medical and consent data, reducing fraud and illegal organ trading.</p>
                         <a href="#"><i class="fa-solid fa-hospital-user"></i></a>
                     </div>
                 </div>
             </div>
             <a href="#" class="btn">See More</a>
         </div>
-    </div>
+    </section>
 
-    <div id="contact">
+    <!-- CONTACT SECTION -->
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -111,7 +115,7 @@
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -121,9 +125,11 @@
         <div class="copyright">
             <p>Copyright © 2025 <i class="fa-solid fa-book-open"></i> M Mohammed Nawaz</p>
         </div>
-    </div>
+    </section>
 
+    <!-- SCRIPTS -->
     <script>
+        // Tabs
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname) {
@@ -137,12 +143,13 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+        // Menu toggle
         var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
             sidemenu.style.right = "0";
         }
         function closemenu() {
-            sidemenu.style.right = "-200px";
+            sidemenu.style.right = "-250px";
         }
     </script>
 </body>
