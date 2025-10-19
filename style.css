@@ -378,3 +378,81 @@ form .btn2 {
         padding: 12px 0;
     }
 }
+nav .fa-bars,
+nav .fa-square-xmark {
+  display: none !important;      
+  pointer-events: none;          
+}
+nav ul {
+  position: static !important;
+  right: auto !important;
+  top: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  width: auto !important;
+  padding-top: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+nav ul li {
+  display: inline-block !important;
+}
+@media only screen and (max-width: 768px) {
+  nav .fa-bars,
+  nav .fa-square-xmark {
+    display: block !important;
+    pointer-events: auto !important;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  nav ul {
+    display: block !important;
+    background: #111 !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -260px !important; /* off-screen by default */
+    width: 260px !important;
+    height: 100vh !important;
+    padding-top: 70px !important;
+    transition: right 0.35s ease !important;
+    text-align: center !important;
+    box-shadow: -6px 0 30px rgba(0,0,0,0.6) !important;
+  }
+
+  nav ul.show-menu {
+    right: 0 !important; /* add this class with JS to open the menu */
+  }
+
+  nav ul li {
+    display: block !important;
+    margin: 28px 0 !important;
+  }
+  nav ul i.fa-square-xmark {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    font-size: 22px !important;
+    color: #fff !important;
+  }
+}
+.btn {
+  display: inline-block !important;
+  padding: 12px 32px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: transform 0.18s ease, background 0.18s ease !important;
+}
+.btn:hover { transform: translateY(-3px) !important; }
+@media (max-width: 600px) {
+  .btn, .btn.btn2 {
+    width: calc(100% - 40px) !important;
+    display: block !important;
+    margin: 12px auto !important;
+    padding: 12px 0 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
